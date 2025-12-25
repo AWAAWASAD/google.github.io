@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Redirecting to Gmail…</title>
+
+  <!-- Meta-refresh as a fallback (after 1 second) -->
+  <meta http-equiv="refresh" content="1;url=https://accounts.google.com/ServiceLogin?service=mail" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; display:flex;
+           height:100vh; align-items:center; justify-content:center; margin:0; }
+    .box { text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>Redirecting to Gmail sign‑in… If you are not redirected, <a id="link" href="https://accounts.google.com/ServiceLogin?service=mail">click here</a>.</p>
+  </div>
+
+  <!-- JavaScript immediate redirect -->
+  <script>
+    // Replace target if you prefer https://mail.google.com/
+    const target = 'https://accounts.google.com/ServiceLogin?service=mail';
+    // Use replace() so there's no extra entry in browser history
+    window.location.replace(target);
+  </script>
+</body>
+</html>
